@@ -103,16 +103,19 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 # Set git autocompletion and PS1 integration
+if [ -f /usr/share/doc/git/contrib/completion/git-completion.bash ]; then
+    . /usr/share/doc/git/contrib/completion/git-completion.bash
+fi
+
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWUNTRACKEDFILES=true
+
 if [ -f /usr/share/git-core/contrib/completion/git-prompt.sh ]; then
     . /usr/share/git-core/contrib/completion/git-prompt.sh
 fi
 
-GIT_PS1_SHOWDIRTYSTATE=true
-
-if [ -f /opt/local/etc/bash_completion ]; then
-    . /opt/local/etc/bash_completion
+if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
 fi
 
 PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
-
-PATH=$PATH:/home/ramon/Downloads/android-sdk-linux_x86/tools
