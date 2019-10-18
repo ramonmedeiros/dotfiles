@@ -1,7 +1,5 @@
-" Use space instead Tab
+" Use syntax color
 :syntax on
-:set tabstop=4
-:set expandtab
 
 " record the last line
 set viminfo='10,\"30,:20,%,n~/.viminfo
