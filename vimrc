@@ -35,6 +35,9 @@ set nu
 " define MakeTags command
 command! MakeTags !ctags -R .
 
+" define RemoveWhitespaces command
+command RemoveWhitespaces %s/\s\+$//e
+
 " record the last line
 set viminfo='10,\"30,:20,%,n~/.viminfo
 au BufReadPost * if line("'\"")|execute("normal `\"")|endif
@@ -46,6 +49,9 @@ filetype plugin indent on
 "autocmd FileType bash setlocal expandtab tabstop=4 shiftwidth=4
 "autocmd FileType sh setlocal expandtab tabstop=4 shiftwidth=4
 "autocmd FileType yaml setlocal expandtab tabstop=2 shiftwidth=2
+
+" set Jenkinsfile highlight
+au BufNewFile,BufRead Jenkinsfile setf groovy
 
 " case sensitive to save and quit vim
 cab W  w
