@@ -71,3 +71,6 @@ set ruler
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
+
+" enable scroll with mouse
+set mouse=a
