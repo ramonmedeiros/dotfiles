@@ -32,6 +32,9 @@ highlight SpecialKey guifg=#4a4a59
 set list
 set nu
 
+" exclude venv from C-p
+set wildignore=*/venv/*,*/.env/*
+
 " define MakeTags command
 command! MakeTags !ctags -R .
 
@@ -66,3 +69,5 @@ set showmatch
 " show column and lines
 set ruler
 
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start
