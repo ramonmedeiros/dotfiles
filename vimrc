@@ -73,4 +73,4 @@ set ruler
 set backspace=indent,eol,start
 
 " enable scroll with mouse
-set mouse=a
+set mouse-=a
