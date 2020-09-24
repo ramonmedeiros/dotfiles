@@ -39,7 +39,10 @@ set wildignore=*/venv/*,*/.env/*
 command! MakeTags !ctags -R .
 
 " define RemoveWhitespaces command
-command RemoveWhitespaces %s/\s\+$//e
+command! RemoveWhitespaces %s/\s\+$//e
+
+" format json
+command! FormatJSON %!python -m json.tool
 
 " record the last line
 set viminfo='10,\"30,:20,%,n~/.viminfo
