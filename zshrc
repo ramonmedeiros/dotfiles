@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/ramonn/.oh-my-zsh"
+export ZSH="/Users/ramonmedeiros/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -71,10 +71,11 @@ ZSH_THEME="agnoster"
 plugins=(
   git
   dotenv
-  osx
+  macos
   python 
   autopep8 
   git-prompt 
+  golang 
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -106,4 +107,21 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
   autoload -Uz promptinit
   promptinit
+  autoload -Uz compinit
+  compinit
   prompt fade blue
+
+export PATH="/usr/local/opt/python@3.7/bin:$PATH"
+export PATH="/usr/local/anaconda3/bin:$PATH"
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/usr/local/include/bin"
+
+export GOPATH=$(go env GOPATH)
+export PATH=$PATH:$(go env GOPATH)/bin
+
+# gcloud
+export PATH="/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/:$PATH"
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+export PATH="/usr/local/opt/libpq/bin:$PATH"
+
+# go private settings
+export GOPRIVATE=github.com/voiapp
