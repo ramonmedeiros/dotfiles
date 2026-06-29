@@ -1,7 +1,5 @@
 # About me
 
-- Work at depict.ai.
-
 # Communication style
 
 - Be concise. Skip preamble ("Sure!", "Great question!") and trailing recaps of what you just did — I can read the diff.
