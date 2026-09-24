@@ -111,17 +111,5 @@ source $ZSH/oh-my-zsh.sh
   compinit
   prompt fade blue
 
-export PATH="/usr/local/opt/python@3.7/bin:$PATH"
-export PATH="/usr/local/anaconda3/bin:$PATH"
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/usr/local/include/bin"
-
 export GOPATH=$(go env GOPATH)
 export PATH=$PATH:$(go env GOPATH)/bin
-
-# gcloud
-export PATH="/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/:$PATH"
-source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
-export PATH="/usr/local/opt/libpq/bin:$PATH"
-
-# go private settings
-export GOPRIVATE=github.com/voiapp
